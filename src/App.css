@@ -2,8 +2,54 @@
   text-align: center;
 }
 
-.ui.layout.container{
-  margin-top: 0em;
+
+
+.app{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(https://cdn.statically.io/img/wallpaperplay.com/walls/full/c/6/a/58067.jpg);
 }
 
+.navbar{
 
+  margin-top: 2em;
+  
+
+
+}
+.ui.stackable.menu{
+
+  height:70px;
+}
+.sideMenu{
+
+  margin-top: 2.5em;
+
+  
+}
+
+.large.text {
+  font-size: 1.1rem;
+}
+
+.nav-image{
+
+  height:60px;
+   
+
+}
+
+.main-dashboard{
+
+  margin-top: 2em;
+}
+
+.job-ad-form{
+
+  width: 80%;
+  height: 85vh;
+  margin: 70px auto;
+}

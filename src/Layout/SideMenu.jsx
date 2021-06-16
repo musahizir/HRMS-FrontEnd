@@ -3,9 +3,9 @@ import { Menu } from 'semantic-ui-react'
 
 export default function SideMenu() {
     return (
-        <div>
+        <div className ="sideMenu">
 
-<Menu vertical inverted size ="large">
+<Menu inverted vertical size ="large">
         <Menu.Item
           name='companies'
           

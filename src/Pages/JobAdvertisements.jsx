@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Icon, Menu, Table, Header } from 'semantic-ui-react'
-import CandidateService from '../Services/candidateService';
 import JobAdvertisementService from '../Services/jobAdvertisementService';
 
 

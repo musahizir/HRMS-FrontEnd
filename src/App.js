@@ -2,27 +2,24 @@
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 import Navi from './Layout/Navi';
-import MainDashboard from './Layout/MainDashboard';
 import { Container } from 'semantic-ui-react';
+import JobAdForm from './Pages/JobAdForm';
+
 
 
 function App() {
   return (
-    <div className="App">
+    <div  className="app">
+  
+    <Container>
+    <Navi/>
+    
       
-
-
-<Container className="layout">
-<Navi/>
-<MainDashboard/>
-
-
-
-</Container>
-
-
-
+     <JobAdForm></JobAdForm>
+    </Container>
+    console.log()
     </div>
+    
   );
 }
 

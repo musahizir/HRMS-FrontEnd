@@ -21,10 +21,10 @@ export default function Employees() {
 
     return (
         <div>
-            <Header as='h4' textAlign='left'>
+            <Header inverted textAlign='left' size="medium" >
       Employees
     </Header>
-      <Table celled inverted>
+      <Table inverted celled >
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>First Name</Table.HeaderCell>
