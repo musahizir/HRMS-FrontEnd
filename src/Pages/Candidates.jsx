@@ -19,15 +19,15 @@ export default function Candidates() {
         
             <div>
 
-<Header as='h4' textAlign='left'>
-      Candidates
+<Header textAlign='left' size="medium">
+      İş Arayanlar
     </Header>
       <Table celled inverted>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>First Name</Table.HeaderCell>
-            <Table.HeaderCell>Last Name</Table.HeaderCell>
-            <Table.HeaderCell>Birth Year</Table.HeaderCell>
+            <Table.HeaderCell>Ad</Table.HeaderCell>
+            <Table.HeaderCell>Soyad</Table.HeaderCell>
+            <Table.HeaderCell>Doğum Tarihi</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
            
 

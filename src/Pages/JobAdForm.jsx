@@ -6,8 +6,8 @@ import JobAdWorkingStyleService from '../Services/jobAdWorkingStyleService';
 import JobAdShiftService from '../Services/jobAdShiftService';
 import JobAdvertisementService from '../Services/jobAdvertisementService';
 import * as Yup from "yup";
-import { Form, Input, Grid, Button } from 'semantic-ui-react';
-import { Dropdown } from 'semantic-ui-react'
+import { Form, Input, Grid, Button , Dropdown } from 'semantic-ui-react';
+
 
 
 export default function JobAdForm() {
@@ -18,7 +18,7 @@ export default function JobAdForm() {
   const [jobPositions, setJobPositions] = useState([]);
   const [jobAdWorkingStyles, setJobAdWorkingStyles] = useState([]);
   const [jobAdShifts, setJobAdShifts] = useState([]);
-
+ 
 
   useEffect(() => {
 
@@ -84,9 +84,10 @@ export default function JobAdForm() {
       values.employerId = 42;
       jobAdvertisementService.jobAdAdd(values).then((response) => console.log(response.data.message))
       // console.log(values);
+      window.location.reload()
     },
 
-  },
+  }
 
   );
 
@@ -367,3 +368,10 @@ export default function JobAdForm() {
     </div>
   )
 }
+
+
+
+
+
+
+

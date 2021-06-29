@@ -18,15 +18,15 @@ export default function Companies() {
     return (
 
         <div>
-            <Header as='h4' textAlign='left'>
-      Companies
+            <Header textAlign='left' size="medium">
+      Şirketler
     </Header>
       <Table celled inverted>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>Company Name</Table.HeaderCell>
+            <Table.HeaderCell>Şirket Adı</Table.HeaderCell>
             <Table.HeaderCell>Website</Table.HeaderCell>
-            <Table.HeaderCell>Phone Number</Table.HeaderCell>
+            <Table.HeaderCell>Telefon Numarası</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
            
 

@@ -20,17 +20,17 @@ export default function JobAdvertisements() {
     <div>
 
 <Header as='h3' textAlign='left'>
-      Job Advertisements
+      İş İlanları
     </Header>
 
       <Table celled inverted>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>Company Name</Table.HeaderCell>
-            <Table.HeaderCell>Job Position</Table.HeaderCell>
-            <Table.HeaderCell>City</Table.HeaderCell>
-            <Table.HeaderCell>Open Position</Table.HeaderCell>
-            <Table.HeaderCell>Application Ends</Table.HeaderCell>
+            <Table.HeaderCell>Şirket Adı</Table.HeaderCell>
+            <Table.HeaderCell>İş Pozisyonu</Table.HeaderCell>
+            <Table.HeaderCell>Şehir</Table.HeaderCell>
+            <Table.HeaderCell>Açık Pozisyon Sayısı</Table.HeaderCell>
+            <Table.HeaderCell>Başvuru Bitiş Tarihi</Table.HeaderCell>
 
           </Table.Row>
         </Table.Header>

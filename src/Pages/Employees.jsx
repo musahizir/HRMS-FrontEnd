@@ -21,14 +21,14 @@ export default function Employees() {
 
     return (
         <div>
-            <Header inverted textAlign='left' size="medium" >
-      Employees
+            <Header textAlign='left' size="medium" >
+      Çalışanlar
     </Header>
       <Table inverted celled >
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>First Name</Table.HeaderCell>
-            <Table.HeaderCell>Last Name</Table.HeaderCell>
+            <Table.HeaderCell>Ad</Table.HeaderCell>
+            <Table.HeaderCell>Soyad</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
            
 

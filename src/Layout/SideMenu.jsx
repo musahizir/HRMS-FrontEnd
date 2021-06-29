@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
 
 export default function SideMenu() {
@@ -8,34 +9,35 @@ export default function SideMenu() {
 <Menu inverted vertical size ="large">
         <Menu.Item
           name='companies'
-          
+          as = {NavLink} to="/companies"
         >
           
-          <p>Companies</p>
+          <p>Şirketler</p>
         </Menu.Item>
 
         <Menu.Item
           name='candidates'
+          as ={NavLink} to = "/candidates"
           
         >
           
-          <p>Candidates</p>
+          <p>İş Arayanlar</p>
         </Menu.Item>
 
         <Menu.Item
           name='jobAdvertisements'
-          
+          as = {NavLink} to="/jobAdvertisements"
         >
           
-          <p>Job Advertisements</p>
+          <p>İş İlanları</p>
         </Menu.Item>
 
         <Menu.Item
           name='employees'
-          
+          as = {NavLink} to="/employees"
         >
           
-          <p>Employees</p>
+          <p>Çalışanlar</p>
         </Menu.Item>
       </Menu>
             

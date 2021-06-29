@@ -1,8 +1,19 @@
 
-import React from 'react'
-import {Menu,Image,Button} from 'semantic-ui-react'
+import React, {useState} from 'react'
+import { NavLink } from 'react-router-dom'
+import {Menu,Image} from 'semantic-ui-react'
+import SignedIn from './SignedIn'
+import SignedOut from './SignetOut'
 
 export default function Navi() {
+
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
+
+    function hamndleSignOut(params) {
+        setIsAuthenticated(false)
+        
+    }
+
     return (
    
 
@@ -16,21 +27,20 @@ export default function Navi() {
 
 </Image>
 </Menu.Item>
-<Menu.Item >
 
-<p > Home</p>
+<Menu.Item as ={NavLink} to="/" >
+
+<p > Ana Sayfa</p>
 </Menu.Item>
 
 <Menu.Menu position = "right">
 <Menu.Item >
 
-   <Button  color="grey" > <p > Sign In</p> </Button>
+{isAuthenticated?<SignedIn signOut= {hamndleSignOut} />:<SignedOut/>}
+  
 </Menu.Item>
 
-<Menu.Item >
 
-   <Button  color="grey" > <p> Sign Out</p> </Button>
-</Menu.Item>
 </Menu.Menu>
 
 </Menu>
