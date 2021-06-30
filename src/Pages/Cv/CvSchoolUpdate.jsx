@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Formik, Form} from 'formik'
 import CvTextInput from '../../utilities/customFormControls/CvTextInput'
 import {Button } from "semantic-ui-react"
 import { useParams } from 'react-router-dom';
 import * as Yup from "yup";
-import CvExperiencesService from '../../Services/cvExperienceService';
 import CvSchoolService from '../../Services/cvSchoolService';
 
 export default function CvSchoolUpdate() {
@@ -27,14 +26,24 @@ export default function CvSchoolUpdate() {
     
 })
 
+const [cvSchool, setCvSchool] = useState([])
+
+   useEffect(()=>{
+
+    let cvSchoolService = new CvSchoolService()
+
+    cvSchoolService.getCvSchool(cvSchoolId).then(result=>setCvSchool(result.data.data))
+    
+  },[])
+
     
     // console.log(cvId)
     const initialValues= {
        
-        cvSchoolName: "",
-        cvSchoolBranch: "",
-        cvSchoolGraduateDate:"",
-        cvSchoolStartDate:""
+        cvSchoolName: cvSchool.cvSchoolName,
+        cvSchoolBranch: cvSchool.cvSchoolBranch,
+        cvSchoolGraduateDate: cvSchool.cvSchoolGraduateDate,
+        cvSchoolStartDate:cvSchool.cvSchoolStartDate
        
 
 
@@ -47,6 +56,8 @@ export default function CvSchoolUpdate() {
             initialValues={initialValues}
 
             validationSchema={schema}
+
+            enableReinitialize
             
             onSubmit= {(values)=>{
 

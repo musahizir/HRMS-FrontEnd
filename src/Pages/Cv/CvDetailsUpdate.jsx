@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Formik, Form} from 'formik'
+import { Formik, Form, useFormik} from 'formik'
 import CvTextInput from '../../utilities/customFormControls/CvTextInput'
 import {Button } from "semantic-ui-react"
 import { useParams } from 'react-router-dom';
@@ -17,15 +17,15 @@ export default function CvDetailsUpdate() {
     
    let cvDetailsService = new CvDetailsService();
 
-//    const [cvDetails, setCvDetails] = useState([])
+   const [cvDetails, setCvDetails] = useState([])
 
-//    useEffect(()=>{
+   useEffect(()=>{
 
-//     let cvDetailService = new CvDetailsService()
+    let cvDetailService = new CvDetailsService()
 
-//     cvDetailService.getCvDetail(cvDetailsId).then(result=>setCvDetails(result.data.data))
+    cvDetailService.getCvDetail(cvDetailsId).then(result=>setCvDetails(result.data.data))
     
-//   },[])
+  },[])
      
         
    const schema = Yup.object({
@@ -34,15 +34,15 @@ export default function CvDetailsUpdate() {
     
 })
 
+ 
 
 
   
-    
     // console.log(cvId)
     const initialValues= {
        
        
-        cvDetailsField: ""
+         cvDetailsField : cvDetails.cvDetailsField
         
     }
     return (
@@ -51,6 +51,9 @@ export default function CvDetailsUpdate() {
             <b>Cv Detayları</b>
             <Formik
 
+
+            enableReinitialize  
+
             initialValues={initialValues}
 
             validationSchema={schema}
@@ -58,9 +61,9 @@ export default function CvDetailsUpdate() {
             onSubmit= {(values)=>{
 
                 cvDetailsService.updateCvDetails(values,intCvDetailsId );
-                // window.location.reload()
+                 window.location.reload()
 
-                console.log(values)
+                
                 
             }}
             >

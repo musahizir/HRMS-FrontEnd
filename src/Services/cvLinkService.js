@@ -17,4 +17,8 @@ export default class CvLinkService {
     updateCvLink(values,intcvLinkId) {
         return axios.post("http://localhost:8080/api/cvLink/update?id="+intcvLinkId,values)
     }
+
+    getCvLink(intCvLinkId){
+        return axios.get("http://localhost:8080/api/cvLink/getById?id="+intCvLinkId)
+    }
 }

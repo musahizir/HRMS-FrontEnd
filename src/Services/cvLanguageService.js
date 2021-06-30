@@ -17,4 +17,8 @@ export default class CvLanguageService {
     updateCvLanguage(values,intcvLanguageId) {
         return axios.post("http://localhost:8080/api/cvLanguage/update?id="+intcvLanguageId,values)
     }
+
+    getCvLanguage(intCvLanguageId){
+        return axios.get("http://localhost:8080/api/cvLanguage/getById?id="+intCvLanguageId)
+    }
 }

@@ -17,7 +17,15 @@ export default function CvExperienceUpdate() {
     
    let cvExperienceService = new CvExperiencesService();
 
+   const [cvExperience, setCvExperience] = useState([])
 
+   useEffect(()=>{
+
+    let cvExperienceService = new CvExperiencesService()
+
+    cvExperienceService.getCvExperience(cvExperienceId).then(result=>setCvExperience(result.data.data))
+    
+  },[])
      
         
    const schema = Yup.object({
@@ -37,10 +45,10 @@ export default function CvExperienceUpdate() {
     const initialValues= {
        
        
-        cvExperienceCompanyName: "",
-        cvExperienceLeaveDate: "",
-        cvExperienceStartDate: "",
-        cvExperiencePosition: ""
+        cvExperienceCompanyName: cvExperience.cvExperienceCompanyName,
+        cvExperienceLeaveDate: cvExperience.cvExperienceLeaveDate,
+        cvExperienceStartDate: cvExperience.cvExperienceStartDate,
+        cvExperiencePosition: cvExperience.cvExperiencePosition
         
     }
     return (
@@ -51,12 +59,14 @@ export default function CvExperienceUpdate() {
 
             initialValues={initialValues}
 
+            enableReinitialize  
+
             validationSchema={schema}
             
             onSubmit= {(values)=>{
 
                 cvExperienceService.updateCvExperience(values,intcvExperienceId );
-                // window.location.reload()
+                 window.location.reload()
 
                 console.log(values)
                 

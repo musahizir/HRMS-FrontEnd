@@ -2,12 +2,12 @@ import React from 'react'
 import {useField} from "formik"
 import {FormField, Label} from 'semantic-ui-react'
 
-export default function CvTextInput({...props}) {
+export default function RegisterInput({...props}) {
 
     const [field,meta] = useField(props)
-    return (    
+    return (
         <div>
-            <FormField  error= {meta.touched && !!meta.error} >
+             <FormField  error= {meta.touched && !!meta.error} >
             <input {...field} {...props} ></input>
             
             {meta.touched && !!meta.error ? (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Formik, Form} from 'formik'
 import CvTextInput from '../../utilities/customFormControls/CvTextInput'
 import {Button } from "semantic-ui-react"
@@ -26,12 +26,21 @@ export default function CvProgrammingLanguageUpdate() {
     
 })
 
+const [cvProgrammingLanguage, setCvProgrammingLanguage] = useState([])
+
+   useEffect(()=>{
+
+    let cvProgrammingLanguageService = new CvProgrammingLanguageService()
+
+    cvProgrammingLanguageService.getCvProgrammingLanguage(cvProgrammingLanguageId).then(result=>setCvProgrammingLanguage(result.data.data))
+    
+  },[])
     
     // console.log(cvId)
     const initialValues= {
         
-        cvProgrammingLanguageName: "",
-        cvProgrammingLanguageLevel: ""
+        cvProgrammingLanguageName: cvProgrammingLanguage.cvProgrammingLanguageName,
+        cvProgrammingLanguageLevel: cvProgrammingLanguage.cvProgrammingLanguageLevel
        
 
 
@@ -46,6 +55,8 @@ export default function CvProgrammingLanguageUpdate() {
             initialValues={initialValues}
 
             validationSchema={schema}
+
+            enableReinitialize
             
             onSubmit= {(values)=>{
 

@@ -223,7 +223,7 @@ import { Link } from 'react-router-dom';
           <div
             className={toggleState === 2 ? "content  active-content" : "content"}
           >
-            <h2>Content 2</h2>
+            <h2>İş Tecrübeleri</h2>
             <hr />
             <p>
             <Table celled>
@@ -264,7 +264,7 @@ import { Link } from 'react-router-dom';
           <div
             className={toggleState === 3 ? "content  active-content" : "content"}
           >
-            <h2>Content 3</h2>
+            <h2>Linkler</h2>
             <hr />
             <p>
             <Table celled>
@@ -300,7 +300,7 @@ import { Link } from 'react-router-dom';
           <div
             className={toggleState === 4 ? "content  active-content" : "content"}
           >
-            <h2>Content 4</h2>
+            <h2>Diller</h2>
             <hr />
             <p>
             <Table celled>
@@ -336,7 +336,7 @@ import { Link } from 'react-router-dom';
           <div
             className={toggleState === 5 ? "content  active-content" : "content"}
           >
-            <h2>Content 5</h2>
+            <h2>Programlama Dilleri</h2>
             <hr />
             <p>
             <Table celled>
@@ -370,7 +370,7 @@ import { Link } from 'react-router-dom';
           <div
             className={toggleState === 6 ? "content  active-content" : "content"}
           >
-            <h2>Content 6</h2>
+            <h2>Açıklamalar</h2>
             <hr />
             <p>
             <Table celled>
@@ -390,7 +390,7 @@ import { Link } from 'react-router-dom';
 
 <Table.Cell>{cvDetails.cvDetailsField}</Table.Cell>
 <Table.Cell><Button  onClick={()=> deleteCvDetails(cvDetails.cvDetailsId)} color="red" floated ="right">Sil</Button></Table.Cell>
-<Table.Cell>  <Link to={`/candidateprofile/detailsupdate/${cvDetails.cvDetailsId}`}>  <Button color="orange" floated ="right">Güncelle</Button> </Link></Table.Cell>
+<Table.Cell>  <Link to={`/candidateprofile/detailsupdate/${cvDetails.cvDetailsId}`}>  <Button color="orange" floated ="right">Güncelle </Button > </Link> </Table.Cell>
 
 
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Formik, Form} from 'formik'
 import CvTextInput from '../../utilities/customFormControls/CvTextInput'
 import {Button } from "semantic-ui-react"
@@ -24,11 +24,21 @@ export default function CvLinkUpdate() {
     
 })
 
+const [cvLink, setCvLink] = useState([])
+
+   useEffect(()=>{
+
+    let cvLinkService = new CvLinkService()
+
+    cvLinkService.getCvLink(cvLinkId).then(result=>setCvLink(result.data.data))
+    
+  },[])
+
     
     // console.log(cvId)
     const initialValues= {
         
-        linkName: ""
+        linkName: cvLink.linkName
         
        
 
@@ -42,6 +52,8 @@ export default function CvLinkUpdate() {
             initialValues={initialValues}
 
             validationSchema={schema}
+
+            enableReinitialize
             
             onSubmit= {(values)=>{
 

@@ -17,6 +17,9 @@ export default class CvExperiencesService {
         return axios.post("http://localhost:8080/api/cvExperience/update?id="+intcvExperienceId,values)
     }
 
+    getCvExperience(intCvExperienceId){
+        return axios.get("http://localhost:8080/api/cvExperience/getById?id="+intCvExperienceId)
+    }
   
 
     

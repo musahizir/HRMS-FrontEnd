@@ -18,6 +18,10 @@ export default class CvSchoolService {
     updateCvSchool(values,intcvSchoolId) {
         return axios.post("http://localhost:8080/api/cvSchool/update?id="+intcvSchoolId,values)
     }
+
+    getCvSchool(intCvSchoolId){
+        return axios.get("http://localhost:8080/api/cvSchool/getById?id="+intCvSchoolId)
+    }
 }
     
 

@@ -17,4 +17,8 @@ export default class CvProgrammingLanguageService {
     updateCvProgrammingLanguage(values,intcvProgrammingLanguageId) {
         return axios.post("http://localhost:8080/api/programmingLanguage/update?id="+intcvProgrammingLanguageId,values)
     }
+
+    getCvProgrammingLanguage(intCvProgrammingLanguageId){
+        return axios.get("http://localhost:8080/api/programmingLanguage/getById?id="+intCvProgrammingLanguageId)
+    }
 }

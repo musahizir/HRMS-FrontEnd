@@ -56,6 +56,8 @@ export default function MainDashboard() {
                    <Route exact path="/candidateprofile/programminglanguageupdate/:cvProgrammingLanguageId" component ={CvProgrammingLanguageUpdate}></Route>
                    <Route exact path="/candidateprofile/schoolupdate/:cvSchoolId" component ={CvSchoolUpdate}></Route>
 
+                   {/* <EmployeeProfile></EmployeeProfile> */}
+
 
 
                    
