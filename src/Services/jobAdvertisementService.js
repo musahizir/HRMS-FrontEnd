@@ -5,37 +5,45 @@ export default class JobAdvertisementService {
         return axios.get("http://localhost:8080/api/jobad/findByjobAdIsActiveTrue")
     }
 
-    jobAdAdd(values){
-        return axios.post("http://localhost:8080/api/jobad/add",values)
+    jobAdAdd(values) {
+        return axios.post("http://localhost:8080/api/jobad/add", values)
     }
 
-    getJobAdvertisementsNotConfirmed(){
+    getJobAdvertisementsNotConfirmed() {
         return axios.get("http://localhost:8080/api/jobad/getAllByJobAdIsConfirmedFalse")
     }
 
-    jobAdChangeConfirmedFalseToTrue(jobAdId){
+    jobAdChangeConfirmedFalseToTrue(jobAdId) {
 
-        return axios.post("http://localhost:8080/api/jobad/changeConfirmedFalseToTrue?id="+jobAdId)
+        return axios.post("http://localhost:8080/api/jobad/changeConfirmedFalseToTrue?id=" + jobAdId)
     }
 
-    jobAdRemove(jobAdId){
+    jobAdRemove(jobAdId) {
 
-        return axios.post("http://localhost:8080/api/jobad/remove?id="+jobAdId)
+        return axios.post("http://localhost:8080/api/jobad/remove?id=" + jobAdId)
     }
 
-    jobAdchangePassiveToActive(jobAdId){
+    jobAdchangePassiveToActive(jobAdId) {
 
-        return axios.post("http://localhost:8080/api/jobad/changePassiveToActive?id="+jobAdId)
+        return axios.post("http://localhost:8080/api/jobad/changePassiveToActive?id=" + jobAdId)
 
-}
+    }
 
-getAllByJobAdIsConfirmedFalseAndConfirmRequestTrue(){
-    return axios.get("http://localhost:8080/api/jobad/getAllByJobAdIsConfirmedFalseAndConfirmRequestTrue")
-}
+    getAllByJobAdIsConfirmedFalseAndConfirmRequestTrue() {
+        return axios.get("http://localhost:8080/api/jobad/getAllByJobAdIsConfirmedFalseAndConfirmRequestTrue")
+    }
 
 
-jobAdChangeConfirmRequestTrueToFalse(jobAdId){
+    jobAdChangeConfirmRequestTrueToFalse(jobAdId) {
 
-    return axios.post("http://localhost:8080/api/jobad/changeConfirmRequestTrueToFalse?id="+jobAdId)
-}
+        return axios.post("http://localhost:8080/api/jobad/changeConfirmRequestTrueToFalse?id=" + jobAdId)
+    }
+
+    getAllJobAdPageNumberAndPageSizeAndFilter(pageNo, pageSize,filter){
+
+        return axios.post(`http://localhost:8080/api/jobad/getAllPageNumberAndPageSizeAndFilter?pageNo=${pageNo}&pageSize=${pageSize}`,filter);
+    }
+
+
+
 }

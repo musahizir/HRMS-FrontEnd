@@ -21,6 +21,7 @@ import CvLanguageUpdate from '../Pages/Cv/CvLanguageUpdate'
 import CvLinkUpdate from '../Pages/Cv/CvLinkUpdate'
 import CvProgrammingLanguageUpdate from '../Pages/Cv/CvProgrammingLanguageUpdate'
 import CvSchoolUpdate from '../Pages/Cv/CvSchoolUpdate'
+import Test123 from '../Pages/Test123'
 
 
 
@@ -57,6 +58,7 @@ export default function MainDashboard() {
                    <Route exact path="/candidateprofile/schoolupdate/:cvSchoolId" component ={CvSchoolUpdate}></Route>
 
                    {/* <EmployeeProfile></EmployeeProfile> */}
+
 
 
 
