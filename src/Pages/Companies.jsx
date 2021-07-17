@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import { Icon, Menu, Table, Header } from 'semantic-ui-react'
 import CompanyService from '../Services/companyService';
+import Test123 from './Test123';
 
 export default function Companies() {
-    
-    const [companies, setCompanies] = useState([]);
 
-    useEffect(()=>{
+  const [companies, setCompanies] = useState([]);
 
-
-        let companyService = new CompanyService();
-        companyService.getCompanies().then(result=>setCompanies(result.data.data))
+  useEffect(() => {
 
 
-    },[])
-    
-    return (
+    let companyService = new CompanyService();
+    companyService.getCompanies().then(result => setCompanies(result.data.data))
 
-        <div>
-            <Header textAlign='left' size="medium">
-      Şirketler
-    </Header>
+
+  }, [])
+
+  return (
+
+    <div>
+      <Header textAlign='left' size="medium">
+        Şirketler
+      </Header>
       <Table celled inverted>
         <Table.Header>
           <Table.Row>
@@ -28,14 +29,20 @@ export default function Companies() {
             <Table.HeaderCell>Website</Table.HeaderCell>
             <Table.HeaderCell>Telefon Numarası</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
-           
+            
+
 
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-          {companies.map(employer =>(
+          {companies.map(employer => (
+            
+              
+            
             <Table.Row>
+
+              
 
               <Table.Cell>{employer.companyName}</Table.Cell>
               <Table.Cell>{employer.website}</Table.Cell>
@@ -45,9 +52,9 @@ export default function Companies() {
 
             </Table.Row>
           ))
-         }
+          }
 
-    </Table.Body>
+        </Table.Body>
 
         <Table.Footer>
           <Table.Row>
@@ -68,6 +75,7 @@ export default function Companies() {
           </Table.Row>
         </Table.Footer>
       </Table>
-        </div>
-    )
+     
+    </div>
+  )
 }

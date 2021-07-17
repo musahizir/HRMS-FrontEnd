@@ -19,9 +19,9 @@ function App() {
     {/* <JobAdForm></JobAdForm> */}
     {/* <JobAdConfirmPanel></JobAdConfirmPanel> */}
     {/* <JobAdvertisements></JobAdvertisements> */}
-    {/* <CandidateProfile></CandidateProfile> */}
-    <EmployeeRegister></EmployeeRegister>
-    <EmployeeUpdate></EmployeeUpdate>
+    <CandidateProfile></CandidateProfile>
+    {/* <EmployeeRegister></EmployeeRegister>
+    <EmployeeUpdate></EmployeeUpdate> */}
     
 
     
